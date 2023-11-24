@@ -1,0 +1,54 @@
+@mixin text {
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 122.8%;
+    text-transform: lowercase;
+}
+
+@mixin textButton {
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 122.8%;
+}
+
+@mixin textLink {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 122.8%; 
+    margin-right: 30px;
+}
+
+@mixin h2 {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 141.3%;
+    text-transform: uppercase;
+    
+}
+
+@mixin h2-mobile {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 141.3%;
+    text-transform: uppercase;
+    
+}
+
+@mixin text-mobile {
+    font-family: Raleway;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 122.8%;
+    text-transform: lowercase;
+}
