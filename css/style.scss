@@ -24,7 +24,7 @@
     position: fixed;
     top: 0; 
     left: 0; 
-    height: 946px;
+    //height: 946px;
     z-index: 99999;
 
     .modal {
@@ -63,6 +63,13 @@
             align-items: flex-start;
             padding-left: 77px;
 
+            & input {
+
+                -webkit-appearance: none;
+                appearance: none;
+                
+            }
+
             & p {
 
                 color: rgba(255, 255, 255, 0.80);
@@ -71,6 +78,8 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 122.8%;
+                display: flex;
+                flex-direction: column;
     
             }
 
@@ -84,12 +93,12 @@
 
         &__button {
 
+            
             padding-left: 77px;
             margin-bottom: 174px;
             
             &__checkbox {
 
-                display: flex;
                 color: #FFF;
                 font-family: Montserrat;
                 font-size: 16px;
@@ -100,10 +109,18 @@
                 margin-bottom: 89px;
                 align-items: center;
 
+                
                 & input {
 
-                    margin-right: 23px;
+                    margin-right: 25px;
+                    margin-left: 10px;
                     transform: scale(2.5);
+                }
+
+                & label {
+
+                    margin-left: 20px;
+                    padding: 10px;
                 }
             }
 
@@ -406,200 +423,6 @@
     }
 }
 
-// @media (min-width: 768px) and (max-width: 1024px) {
+//@media (min-width: 768px) and (max-width: 1024px) {
 
-//     .container {
-//         max-width: 1024px;
-//         margin: 0 16px;
-//     }
-
-// }
-
-// @media (min-width: 320px) and (max-width: 768px) {
-
-//     .container {
-//         max-width: 768px;
-//         margin: 0 16px;
-//     }
-
-//     .header {
-
-//         &__content {
-
-//             display: flex;
-//             justify-content: space-between;
-//             margin-top: 40px;
-//             margin-bottom: 76px;
-//             align-items: center;
-//         }
-
-//         .menu {
-
-//             display: none;
-            
-//         }
-
-//         .menu__mobile {
-//             display: flex;
-//             margin-right: 10px;
-
-//         }
-
-//         .phone {
-
-//             &__img {
-
-//                 margin-right: 15px;
-
-//             }
-
-//             &__number {
-
-//                 display: none;
-//             }
-//         }
-//     }
-
-//     .offer {
-
-//         &__content {
-
-//            grid-template-columns: repeat(4, 1fr);
-
-//             &__center {
-
-//                 grid-column: 1 / 4;
-    
-//                 &__title {
-    
-//                     color: $textColor2;
-//                     font-family: Raleway;
-//                     font-size: 25px;
-//                     font-style: normal;
-//                     font-weight: 600;
-//                     line-height: 135.3%;
-//                     text-transform: uppercase;
-//                     margin-bottom: 53px;
-//                     margin-top: 118px;
-//                 }
-    
-//                 &__text {
-    
-//                     color: $textColor;
-//                     @include text;
-//                     padding-left: 24px;
-//                     border-left: 1px solid #FFF;
-//                     margin-bottom: 64px;
-//                 }
-    
-//                 &__button-box {
-    
-//                     display: flex;
-//                     flex-direction: column;
-//                     margin-bottom: 112px;
-    
-//                     .button__white {
-    
-//                         display: flex;
-//                         color: #07305D;
-//                         align-items: center;
-//                         @include textButton;
-//                         min-width: 126px;
-//                         padding: $paddingButton;
-//                         border: $borderButton;
-//                         background: #FFF;
-//                         margin-bottom: 20px;
-//                         margin-right: 0;
-                        
-                        
-    
-//                         & img {
-    
-//                             margin-left: 28px;
-//                         }
-    
-//                         & svg {
-    
-//                             margin: 38px 13px 13px 39px;
-//                         }
-//                     }
-
-                    
-    
-//                     .button__other {
-    
-//                         display: flex;
-//                         color: $textColor2;
-//                         align-items: center;
-//                         @include textButton;
-//                         padding: $paddingButton;
-//                         border: $borderButton;
-                        
-
-                        
-    
-//                         & img {
-    
-//                             margin-left: 28px;
-//                         }
-    
-//                         & svg {
-    
-//                             margin: 38px 13px 13px 39px;
-//                         }
-//                     }
-                    
-                    
-//                 } 
-//             }
-
-//             &__img {
-
-//                 grid-column: 4 / 5;
-//                 display: none;
-
-//             }
-
-//             &__data {
-
-//                 &-quantity {
-//                     margin-right: 45px;
-
-//                     & h2 {
-
-//                         color: $textColor2;
-//                         @include h2-mobile;
-//                         margin-bottom: 32px;
-        
-//                     }
-
-//                     & p {
-
-//                         color: $textColor;
-//                         @include text-mobile;
-//                     }
-//                 }
-
-//                 &-precent {
-
-//                     & h2 {
-
-//                         color: $textColor2;
-//                         @include h2-mobile;
-//                         margin-bottom: 32px;
-        
-//                     }
-
-//                     & p {
-
-//                         color: $textColor;
-//                         @include text-mobile;
-//                     }
-//                 }
-//             }
-//         }
-
-        
-//     }
-
-// }
+//}
