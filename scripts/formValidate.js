@@ -1,4 +1,4 @@
-
+// ------------  Сложная форма валидации(недоработанная) ----------------
 const form = document.getElementsByTagName("form")[0];
 const validateBtn = document.getElementById("popUpThanksStart");
 const userName = document.getElementById("userName");
@@ -8,31 +8,24 @@ const approval = document.getElementById("approval");
 const fields = form.querySelectorAll('.field')
 
 const validateForm = function () {
-
+    
     let valid = true;
-    if (document.getElementById("userName").value == "") {
-        console.log('Заполните поле', userName)
-        var error = generateError('Заполните поле')
-        userName.parentElement.insertBefore(error, userName)
-        valid = false;
-    } else if (document.getElementById("userPhone").value == "") {
-        console.log('Заполните поле', userPhone)
-        var error = generateError('Заполните поле')
-        userPhone.parentElement.insertBefore(error, userPhone)
-        valid = false;
-    }// } else if (document.getElementById("approval").click) {
-    //     console.log('Пожалуйста, отметь согласие с Соглашением', approval)
-    //     var error = generateError('Пожалуйста, отметь согласие с Соглашением')
-    //     approval.parentElement.insertBefore(error, approval)
-    //     valid = false;
-    // }
-    //removeValidation();
+
+    for (let i = 0; i < fields.length; i++) {
+        if (!fields[i].value) {
+            console.log('Заполните поле', fields[i])
+            const error = generateError('Заполните поле')
+            form[i].parentElement.insertBefore(error, fields[i])
+            valid = false;
+        }
+    }
+    
     return valid;
     
 }
 
 const generateError = function (text) {
-    var error = document.createElement('div');
+    const error = document.createElement('div');
     error.className = 'error';
     error.style.color = 'red';
     error.style.marginBottom = "25px";
@@ -40,15 +33,15 @@ const generateError = function (text) {
     return error;
 }
 
-var removeValidation = function () {
-    var errors = form.querySelectorAll('.error');
+const removeValidation = function () {
+    const errors = form.querySelectorAll('.error');
   
-    for (var i = 0; i < errors.length; i++) {
+    for (let i = 0; i < errors.length; i++) {
         errors[i].remove();
     }
 }
 
-document.getElementById("popUpThanksStart").onclick = function(event) {
+validateBtn.onclick = function(event) {
     
 
     if(validateForm() && document.getElementById("approval").checked) {
@@ -63,7 +56,7 @@ document.getElementById("popUpThanksStart").onclick = function(event) {
         console.log(validateForm());
     } else {
         event.preventDefault();
-        var error = generateError('Пожалуйста, отметьте согласие с Соглашением')
+        const error = generateError('Пожалуйста, отметьте согласие с Соглашением')
         approval.parentElement.insertBefore(error, approval)
         console.log("NO!!!!!!!!!");
         
