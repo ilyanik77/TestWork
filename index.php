@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body >
+
     <div class="top">
 
         <!-- popUpCall -->
@@ -156,11 +157,11 @@
                 </div>
                 <div class="offer__content__data">
                     <div class="offer__content__data-quantity">
-                        <h2>130+</h2>
+                        <h2><?php include('php/sumDate.php');?></h2>
                         <p>техник для<br> достижения целей</p>
                     </div>
                     <div class="offer__content__data-precent">
-                        <h2>250%</h2>
+                        <h2><?php include('php/gbp.php');?></h2>
                         <p>увеличение личной<br> продуктивности</p>
                     </div>
                 </div>
@@ -170,6 +171,7 @@
                 
 
             </div>
+            
         </section>
     </div>
 
