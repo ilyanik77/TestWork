@@ -16,7 +16,7 @@
 
         <!-- popUpCall -->
         <div id="popUpCall" class="popUpCall">
-            <form id="modal" class="modal"  novalidate>
+            <form id="modal" class="modal" action="" >
                 <svg id="popUpCallClose" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
                     <line x1="1.70711" y1="1.69865" x2="32.1127" y2="32.1042" stroke="white" stroke-opacity="0.8" stroke-width="2"/>
                     <line x1="1.29289" y1="31.6982" x2="31.6985" y2="1.29258" stroke="white" stroke-opacity="0.8" stroke-width="2"/>
@@ -25,14 +25,15 @@
 
                 <div id="modal__info" class="modal__info">
                     <p>
-                        <input type="text" id="userName" class="userName field" placeholder="Введите имя" required minlength="4"/>
-                        <span class="error" aria-live="polite"></span>
+                        <input type="text" id="userName" class="userName" placeholder="Введите имя*" minlength="4"/>
+                        <!-- <span class="error" aria-live="polite"></span> -->
                     </p>
                     
                     <img src="img/Line.png" alt="">
                     <p>
-                        <input type="tel" id="userPhone" class="userPhone field" placeholder="Введите телефон" required minlength="10" />
-                        <span class="error" aria-live="polite"></span>
+                        <input type="tel" id="userPhone" class="userPhone" placeholder="Введите телефон*" minlength="10" />
+                        <!-- _req _phone -->
+                        <!-- <span class="error" aria-live="polite"></span> -->
                     </p>
                     <img src="img/Line.png" alt="">
                 </div>
@@ -41,7 +42,7 @@
                     <div class="modal__button__checkbox">
                         
                         <p>
-                            <input type="checkbox" id="approval" class="approval field"  required/>
+                            <input type="checkbox" id="approval" class="approval" />
                             <label for="approval">Согласен на сохранение и обработку персональных данных</label>
                         </p>
                         
@@ -175,7 +176,8 @@
         </section>
     </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="scripts/modal.js"></script>
-<script src="scripts/formValidate2.js"></script>
+<script src="scripts/formValidate3.js"></script>
 </body>
 </html>
