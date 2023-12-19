@@ -10,7 +10,6 @@
     }
             
     $data = CBR_XML_Daily_Ru();
-    //$gbp = $data->Valute->GBP->Value;
     $gbp = round($data->Valute->GBP->Value);
             
     echo $gbp;

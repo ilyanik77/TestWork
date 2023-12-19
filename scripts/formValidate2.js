@@ -6,8 +6,7 @@ const userPhone = document.getElementById("userPhone");
 const approval = document.getElementById("approval");
 const fields = form.querySelectorAll('.field')
 
-function validateForm ( )
-{
+function validateForm ( ) {
 	valid = true;
 
     for (let i = 0; i < fields.length; i++) {
@@ -18,20 +17,45 @@ function validateForm ( )
         }
     }
     return valid;
+    
 }
 
 validateBtn.onclick = function(event) {
-    
 
     if(validateForm() && document.getElementById("approval").checked) {
 
         event.preventDefault();
-        document.querySelector('#popUpThanks').style.display = 'flex';
-        document.querySelector('#popUpCall').style.display = 'none';
-        
+        // var formData = $('form').serialize();
+
+        $.ajax({
+            type: "post",
+            url: 'php/sendMail2.php',
+            data: {
+                name: $(".userName").value(),
+                phone: $(".userPhone").value()
+            },
+            beforeSend: function () {
+                
+                
+            },
+            success: function (data) {
+                
+                document.querySelector('#popUpCall').style.display = 'none';
+                document.querySelector('#popUpThanks').style.display = 'flex';
+
+                console.log(data);
+            },
+            error: function (jqXHR, text, error) {
+                
+                console.log("NO!!!!");
+            }
+        });
+        form.reset();
+
+               
     } else {
         event.preventDefault();
+        console.log("NO");
         alert ( "Пожалуйста, отметь согласие с Соглашением." );
-        
     }
 }
