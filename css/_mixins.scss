@@ -1,6 +1,15 @@
-@mixin text {
+@mixin textData {
     font-family: Raleway;
     font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 122.8%;
+    text-transform: lowercase;
+}
+
+@mixin textDataMobile {
+    font-family: Raleway;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: 122.8%;

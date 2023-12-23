@@ -16,7 +16,7 @@
 
         <!-- popUpCall -->
         <div id="popUpCall" class="popUpCall">
-            <form id="modal" class="modal" action="sendMail2.php" novalidate>
+            <form id="modal" class="modal" action="" >
                 <svg id="popUpCallClose" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
                     <line x1="1.70711" y1="1.69865" x2="32.1127" y2="32.1042" stroke="white" stroke-opacity="0.8" stroke-width="2"/>
                     <line x1="1.29289" y1="31.6982" x2="31.6985" y2="1.29258" stroke="white" stroke-opacity="0.8" stroke-width="2"/>
@@ -25,12 +25,15 @@
 
                 <div id="modal__info" class="modal__info">
                     <p>
-                        <input type="text" id="userName" name="userName" class="userName field" placeholder="Введите имя*" minlength="4" required/>
+                        <input type="text" id="userName" class="userName" placeholder="Введите имя*" minlength="4"/>
+                        <!-- <span class="error" aria-live="polite"></span> -->
                     </p>
                     
                     <img src="img/Line.png" alt="">
                     <p>
-                        <input type="tel" id="userPhone" class="userPhone field" placeholder="Введите телефон*" minlength="10" required/>
+                        <input type="tel" id="userPhone" class="userPhone" placeholder="Введите телефон*" minlength="10" />
+                        <!-- _req _phone -->
+                        <!-- <span class="error" aria-live="polite"></span> -->
                     </p>
                     <img src="img/Line.png" alt="">
                 </div>
@@ -39,7 +42,7 @@
                     <div class="modal__button__checkbox">
                         
                         <p>
-                            <input type="checkbox" id="approval" class="approval" required/>
+                            <input type="checkbox" id="approval" class="approval" />
                             <label for="approval">Согласен на сохранение и обработку персональных данных</label>
                         </p>
                         
@@ -61,7 +64,7 @@
 
         <!-- popUpThanks -->
         <div id="popUpThanks" class="popUpThanks">
-            <div id="popUpThanks" class="modal">
+            <div id="modal" class="modal">
                 <svg id="popUpThanksClose" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
                     <line x1="1.70711" y1="1.69865" x2="32.1127" y2="32.1042" stroke="white" stroke-opacity="0.8" stroke-width="2"/>
                     <line x1="1.29289" y1="31.6982" x2="31.6985" y2="1.29258" stroke="white" stroke-opacity="0.8" stroke-width="2"/>
@@ -97,12 +100,12 @@
                 </div>
                 
                 <div class="menu">
-                    <a href="" class="menu__link">Обо мне</a>
-                    <a href="" class="menu__link">Наставничество</a>
-                    <a href="" class="menu__link">Мероприятия</a>
-                    <a href="" class="menu__link">Кейсы</a>
-                    <a href="" class="menu__link">Отзывы</a>
-                    <a href="" class="menu__link">Контакты</a>
+                    <a href="#" class="menu__link">Обо мне</a>
+                    <a href="#" class="menu__link">Наставничество</a>
+                    <a href="#" class="menu__link">Мероприятия</a>
+                    <a href="#" class="menu__link">Кейсы</a>
+                    <a href="#" class="menu__link">Отзывы</a>
+                    <a href="#" class="menu__link">Контакты</a>
                 </div>
                 
                 <div class="phone">
@@ -122,6 +125,10 @@
         <!-- offer -->
         <section class="offer">
             <div class="offer__content container">
+                <div class="offer__content__img">
+                    <img src="img/mentor 2.png" alt="">
+                </div>
+
                 <div class="offer__content__center">
                     <h1 class="offer__content__center__title">
                         Создаю условия<br>
@@ -149,25 +156,21 @@
                               </svg>
                         </button>
                     </div>
-                </div>
-                <div class="offer__content__img">
-                    <img src="img/mentor 2.png" alt="">
-                </div>
-                <div class="offer__content__data">
-                    <div class="offer__content__data-quantity">
-                        <h2><?php include('php/sumDate.php');?></h2>
-                        <p>техник для<br> достижения целей</p>
+                    <div class="offer__content__center__data">
+                        <div class="offer__content__center__data-quantity">
+                            <h2><?php include('php/sumDate.php');?></h2>
+                            <p>техник для<br> достижения целей</p>
+                        </div>
+                        <div class="offer__content__center__data-precent">
+                            <h2><?php include('php/gbp.php');?></h2>
+                            <p>увеличение личной<br> продуктивности</p>
+                        </div>
                     </div>
-                    <div class="offer__content__data-precent">
-                        <h2><?php include('php/gbp.php');?></h2>
-                        <p>увеличение личной<br> продуктивности</p>
-                    </div>
+                    
+
                 </div>
-
-
-
                 
-
+                
             </div>
             
         </section>
@@ -175,6 +178,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="scripts/modal.js"></script>
-<script src="scripts/formValidate2.js"></script>
+<script src="scripts/formValidate3.js"></script>
 </body>
 </html>

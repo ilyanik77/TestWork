@@ -25,14 +25,13 @@ validateBtn.onclick = function(event) {
     if(validateForm() && document.getElementById("approval").checked) {
 
         event.preventDefault();
-        // var formData = $('form').serialize();
 
         $.ajax({
             type: "post",
             url: 'php/sendMail2.php',
             data: {
-                name: $(".userName").value(),
-                phone: $(".userPhone").value()
+                name: $(".userName").val(),
+                phone: $(".userPhone").val()
             },
             beforeSend: function () {
                 
