@@ -1,4 +1,4 @@
-// ------------  Сложная форма валидации(недоработанная) ----------------
+// ------------  форма валидации  ----------------
 const form = document.getElementsByTagName("form")[0];
 const validateBtn = document.getElementById("popUpThanksStart");
 const userName = document.getElementById("userName");
@@ -10,11 +10,13 @@ const fields = form.querySelectorAll('.field')
 const validateForm = function () {
     
     let valid = true;
+    removeValidation();
 
     for (let i = 0; i < fields.length; i++) {
+        
         if (!fields[i].value) {
-            console.log('Заполните поле', fields[i])
-            const error = generateError('Заполните поле')
+            
+            const error = generateError('Заполните обязательное поле')
             form[i].parentElement.insertBefore(error, fields[i])
             valid = false;
         }
@@ -42,25 +44,45 @@ const removeValidation = function () {
 }
 
 validateBtn.onclick = function(event) {
-    
 
-    if(validateForm() && document.getElementById("approval").checked) {
-
-        
+    if(document.getElementById("approval").checked == false) {
         event.preventDefault();
-        removeValidation();
-    
-        document.querySelector('#popUpThanks').style.display = 'flex';
-        document.querySelector('#popUpCall').style.display = 'none';
-        
+        alert('Пожалуйста, отметьте согласие с Соглашением')
+        console.log("NO!!!!!!!!!");
+        console.log(validateForm());    
+    } else if(!validateForm()) {
+        event.preventDefault();
+        alert('Заполните обязательное поле')
+        console.log("NO!!!!!!!!!");
         console.log(validateForm());
     } else {
         event.preventDefault();
-        const error = generateError('Пожалуйста, отметьте согласие с Соглашением')
-        approval.parentElement.insertBefore(error, approval)
-        console.log("NO!!!!!!!!!");
-        
-    }
-    
+        $.ajax({
+            type: "post",
+            url: 'php/sendMail2.php',
+            data: {
+                name: $(".userName").val(),
+                phone: $(".userPhone").val()
+            },
+            beforeSend: function () {
+                
+                
+            },
+            success: function (data) {
+                
+                document.querySelector('#popUpCall').style.display = 'none';
+                document.querySelector('#popUpThanks').style.display = 'flex';
 
+                console.log("YES!!!!");
+            },
+            error: function (jqXHR, text, error) {
+                
+                console.log("NO!!!!");
+            }
+        });
+        removeValidation();
+        form.reset();
+    }
+
+    
 }

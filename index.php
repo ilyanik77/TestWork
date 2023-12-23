@@ -25,13 +25,13 @@
 
                 <div id="modal__info" class="modal__info">
                     <p>
-                        <input type="text" id="userName" class="userName" placeholder="Введите имя*" minlength="4"/>
+                        <input type="text" id="userName" class="userName field" placeholder="Введите имя*" minlength="4"/>
                         <!-- <span class="error" aria-live="polite"></span> -->
                     </p>
                     
                     <img src="img/Line.png" alt="">
                     <p>
-                        <input type="tel" id="userPhone" class="userPhone" placeholder="Введите телефон*" minlength="10" />
+                        <input type="tel" id="userPhone" class="userPhone field" placeholder="Введите телефон*" minlength="10" />
                         <!-- _req _phone -->
                         <!-- <span class="error" aria-live="polite"></span> -->
                     </p>
@@ -178,6 +178,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="scripts/modal.js"></script>
-<script src="scripts/formValidate3.js"></script>
+<script src="scripts/formValidate.js"></script>
 </body>
 </html>
