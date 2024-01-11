@@ -47,14 +47,10 @@ validateBtn.onclick = function(event) {
 
     if(document.getElementById("approval").checked == false) {
         event.preventDefault();
-        alert('Пожалуйста, отметьте согласие с Соглашением')
-        console.log("NO!!!!!!!!!");
-        console.log(validateForm());    
+        alert('Пожалуйста, отметьте согласие с Соглашением')    
     } else if(!validateForm()) {
         event.preventDefault();
         alert('Заполните обязательное поле')
-        console.log("NO!!!!!!!!!");
-        console.log(validateForm());
     } else {
         
         event.preventDefault();
@@ -65,26 +61,18 @@ validateBtn.onclick = function(event) {
                 name: $(".userName").val(),
                 phone: $(".userPhone").val()
             },
-            beforeSend: function () {
-                
-                
-            },
+            beforeSend: function () {},
             success: function (data) {
                 
                 document.querySelector('#popUpCall').style.display = 'none';
                 document.querySelector('#popUpThanks').style.display = 'flex';
-                saveRequest();
+
                 console.log("YES!!!!");
             },
-            error: function (jqXHR, text, error) {
-                
-                console.log("NO!!!!");
-            }
+            error: function (jqXHR, text, error) {}
         });
         
         removeValidation();
         form.reset();
     }
-
-    
 }
