@@ -1,8 +1,8 @@
 // ------------  форма валидации  ----------------
 const form = document.getElementsByTagName("form")[0];
 const validateBtn = document.getElementById("popUpThanksStart");
-const userName = document.getElementById("userName");
-const userPhone = document.getElementById("userPhone");
+const userNameEl = document.getElementById("userName");
+const userPhoneEl = document.getElementById("userPhone");
 const approval = document.getElementById("approval");
 
 const fields = form.querySelectorAll('.field')
@@ -56,6 +56,7 @@ validateBtn.onclick = function(event) {
         console.log("NO!!!!!!!!!");
         console.log(validateForm());
     } else {
+        
         event.preventDefault();
         $.ajax({
             type: "post",
@@ -72,7 +73,7 @@ validateBtn.onclick = function(event) {
                 
                 document.querySelector('#popUpCall').style.display = 'none';
                 document.querySelector('#popUpThanks').style.display = 'flex';
-
+                saveRequest();
                 console.log("YES!!!!");
             },
             error: function (jqXHR, text, error) {
@@ -80,6 +81,7 @@ validateBtn.onclick = function(event) {
                 console.log("NO!!!!");
             }
         });
+        
         removeValidation();
         form.reset();
     }

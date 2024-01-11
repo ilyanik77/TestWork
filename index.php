@@ -179,5 +179,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="scripts/modal.js"></script>
 <script src="scripts/formValidate.js"></script>
+<script src="scripts/lockalstorage.js"></script>
 </body>
 </html>
