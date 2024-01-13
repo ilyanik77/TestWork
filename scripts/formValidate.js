@@ -54,6 +54,7 @@ validateBtn.onclick = function(event) {
     } else {
         
         event.preventDefault();
+        saveRequest();
         $.ajax({
             type: "post",
             url: 'php/sendMail2.php',
