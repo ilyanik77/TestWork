@@ -67,8 +67,6 @@ validateBtn.onclick = function(event) {
                 
                 document.querySelector('#popUpCall').style.display = 'none';
                 document.querySelector('#popUpThanks').style.display = 'flex';
-
-                console.log("YES!!!!");
             },
             error: function (jqXHR, text, error) {}
         });
