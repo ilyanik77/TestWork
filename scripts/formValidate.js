@@ -45,7 +45,7 @@ const removeValidation = function () {
 
 validateBtn.onclick = function(event) {
 
-    if(document.getElementById("approval").checked == false) {
+    if(document.getElementById("approval").checked === false) {
         event.preventDefault();
         alert('Пожалуйста, отметьте согласие с Соглашением')    
     } else if(!validateForm()) {
