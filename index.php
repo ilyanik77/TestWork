@@ -110,7 +110,8 @@
                 
                 <div class="phone">
                     <div class="menu__mobile">
-                        <img src="img/menu.svg" alt="">
+                        <a href="#"><img src="img/menu.svg" alt=""></a>
+                        
                     </div>
                     <div class="phone__img">
                         <img src="img/Group 1321313978.svg" alt="">
