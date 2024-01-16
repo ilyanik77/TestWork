@@ -158,7 +158,7 @@
                     </div>
                     <div class="offer__content__center__data">
                         <div class="offer__content__center__data-quantity">
-                            <h2><?php include('php/sumDate.php');?></h2>
+                            <h2><?php require ('php/sumDate.php');?></h2>
                             <p>техник для<br> достижения целей</p>
                         </div>
                         <div class="offer__content__center__data-precent">
