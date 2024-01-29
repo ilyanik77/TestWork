@@ -71,16 +71,6 @@
                 
             }
 
-            // p._error {
-
-            //     box-shadow: 0 0 15px red;
-            // }
-
-            // & input _error {
-
-            //     box-shadow: 0 0 15px red;
-            // }
-
             & p {
 
                 color: rgba(255, 255, 255, 0.80);
@@ -296,6 +286,7 @@
 
     &__content {
         position: relative;
+        height: 880px;
 
         &__img {
             position: absolute;
