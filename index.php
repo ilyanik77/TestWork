@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TestWork</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
@@ -110,7 +110,8 @@
                 
                 <div class="phone">
                     <div class="menu__mobile">
-                        <img src="img/menu.svg" alt="">
+                        <a href="#"><img src="img/menu.svg" alt=""></a>
+                        
                     </div>
                     <div class="phone__img">
                         <img src="img/Group 1321313978.svg" alt="">
@@ -158,7 +159,7 @@
                     </div>
                     <div class="offer__content__center__data">
                         <div class="offer__content__center__data-quantity">
-                            <h2><?php include('php/sumDate.php');?></h2>
+                            <h2><?php require ('php/sumDate.php');?></h2>
                             <p>техник для<br> достижения целей</p>
                         </div>
                         <div class="offer__content__center__data-precent">
